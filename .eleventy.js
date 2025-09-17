@@ -1,15 +1,16 @@
-const now = String(Date.now())
+const now = String(Date.now());
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addWatchTarget('./styles/tailwind.config.js')
-  eleventyConfig.addWatchTarget('./styles/tailwind.css')
+  eleventyConfig.addWatchTarget('./styles/tailwind.config.js');
+  eleventyConfig.addWatchTarget('./styles/tailwind.css');
 
-  eleventyConfig.addPassthroughCopy({ './_tmp/style.css': './style.css' })
-  eleventyConfig.addPassthroughCopy('./*.svg')
-  eleventyConfig.addPassthroughCopy('./*.html')
-  eleventyConfig.addPassthroughCopy('./photos/*.jpg')
+  // Copy the entire photos folder to _site/photos
+  eleventyConfig.addPassthroughCopy('photos');
 
-  eleventyConfig.addShortcode('version', function () {
-    return now
-  })
+  // (optional) these only if you actually use them
+  eleventyConfig.addPassthroughCopy({ 'circle.svg': 'circle.svg' });
+
+  eleventyConfig.addShortcode('version', () => now);
+
+  return { dir: { input: '.', output: '_site' } };
 };

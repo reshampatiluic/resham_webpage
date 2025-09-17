@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Computer Science Student Resham Patil
+    </title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+    <!-- Use |url so /style.css becomes /<repo>/style.css on GitHub Pages -->
+    <link rel="stylesheet" href="/resham_webpage/style.css?v=1758080582692" type="text/css"/>
+  </head>
+  <body class="bg-uicblue">
+    <div class="bg-uicblue grid place-items-center">
+      <div id="main-panel" class="shadow-inner shadow-2xl relative bg-white max-w-4xl pb-10">
+        <div id="top-bar" class="fixed z-10 text-uicblue max-w-4xl justify-between items-end p-2 flex flex-row text-center uppercase font-medium bg-white w-full">
+          <a id="logo-link" class="basis-1/3" href="https://www.uic.edu/">
+            <!-- (SVG unchanged) -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 358.3167 68.6566" aria-label="University of Illinois Chicago">
+              <!-- ... existing SVG content ... -->
+            </svg>
+          </a>
+          <!-- Use |url for internal links -->
+          <a class="shrink text-sm" href="/resham_webpage/">home</a>
+          <a class="shrink text-sm" href="/resham_webpage/projects/">projects</a>
+          <a class="shrink text-sm" href="/resham_webpage/#contact">contact</a>
+        </div>
+
+        <div id="portrait-group" class="relative max-w-4xl mb-4">
+          <!-- Use |url and cache-bust for the portrait background -->
+          <div
+            id="portrait"
+            style="background-image: url('../photos/portrait.jpg?v=1758080582692');"
+            class="object-contain h-[50vh] bg-cover bg-center"
+          >&nbsp;</div>
+
+          <!-- Use |url for static assets -->
+          <img id="circlemark" class="absolute bottom-0 left-6 w-24" src="/resham_webpage/circle.svg" alt="UIC circle mark"/>
+
+          <div id="name-title" class="relative mr-5 text-right" style="line-height: 12px">
+            <span class="font-bold text-lg">Resham Patil</span><br/>
+            <span class="text-base font-normal">Computer Science Student</span>
+          </div>
+        </div>
+
+        <div id="content" class="text-justify mx-8 text-base">
+          <h1>research interests</h1>
+<p>I study how retinal bipolar cells process both motion and color. Building on Strauss et al. (2022), which showed that bipolar cells use center-surround receptive fields for motion detection, I extend this work by integrating UV and green channel responses to explore how color interacts with motion in shaping spatiotemporal receptive fields. My goal is to connect motion coding with color opponency to better understand early visual processing in the retina.</p>
+<p>UIC Innovation Center - I have been researching user journeys across Caterpillar’s digital platforms to understand how different behaviors and interactions lead to conversions. By analyzing session patterns, event data, and touchpoints before opportunity creation, I identify key signals that distinguish high-quality leads from general traffic. This helps shape insights for building a lead scoring model that predicts conversion likelihood.</p>
+<h1>about me</h1>
+<p>I grew up in India and completed my Computer Engineering degree at the University of Mumbai, where I also earned an honors specialization in Artificial Intelligence and Machine Learning. Beyond academics, I enjoy hiking and travelling, as well as dancing.</p>
+<h1>contact info</h1>
+<p><a name="contact"></a></p>
+<p>I am best reached by email, at <strong>rpati36@uic.edu</strong>.</p>
+<h1>resume</h1>
+<p>My work experience includes:<br>
+Emerson Innovation Center as Data Science Intern<br>
+Beerbiceps Media as Data Analytics Intern<br>
+Vlasits Lab, UIC as Research Assistant<br>
+UIC Innovation Center as Research Assistant<br></p>
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Optional swipe-to-swap portrait.
+      // If you keep this, make sure the alt image exists in photos/ as portrait-alt.jpg.
+      (function(){
+        var startE = 0;
+        var el = document.getElementById('portrait');
+        if (!el) return;
+        el.addEventListener('touchstart', function(e){ if(e.changedTouches && e.changedTouches[0]) startE = e.changedTouches[0].screenX; }, {passive:true});
+        el.addEventListener('touchend', function(e){
+          if(e.changedTouches && e.changedTouches[0] && e.changedTouches[0].screenX < startE){
+            el.style.backgroundImage = "url('/resham_webpage/photos/portrait-alt.jpg?v=1758080582692')";
+          }
+        }, {passive:true});
+      })();
+    </script>
+  </body>
+</html>

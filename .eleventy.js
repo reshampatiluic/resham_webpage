@@ -12,5 +12,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode('version', () => now);
 
-  return { dir: { input: '.', output: '_site' } };
+  return { dir: { input: '.', output: '_site' },
+  pathPrefix: "/resham_webpage/"
+ };
 };
